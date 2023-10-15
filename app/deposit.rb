@@ -24,15 +24,15 @@ class Deposit < Product
   end
 
   def info
-    puts "ID: #{@id}"
+    puts "ID: #{id}"
     puts "Имя владельца: #{first_name} #{last_name}"
-    puts "Баланс вклада: #{balance}"
+    puts "Баланс вклада: #{balance} рублей"
     puts "Процентная ставка вклада: #{rate}%"
     puts "Срок вклада: #{period} месяцев"
   end
 
   def close
     @status = :closed
-    puts "Ваш вклад №#{@id} закрыт"
+    puts "Ваш вклад №#{id} закрыт"
   end
 end

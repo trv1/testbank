@@ -28,15 +28,15 @@ class Account < Product
   end
 
   def info
-    puts "ID: #{@id}"
+    puts "ID: #{id}"
     puts "Имя владельца: #{first_name} #{last_name}"
-    puts "Баланс счёта: #{balance}"
+    puts "Баланс счёта: #{balance} рублей"
   end
 
   def close
     if @balance.zero?
       @status = :closed
-      puts "Ваш счёт №#{@id} закрыт"
+      puts "Ваш счёт №#{id} закрыт"
     else
       puts 'Снимите все средства перед закрытием счёта'
     end
