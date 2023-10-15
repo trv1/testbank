@@ -1,4 +1,4 @@
-require 'product'
+require_relative './product'
 
 class Account < Product
   attr_accessor :balance
@@ -9,6 +9,8 @@ class Account < Product
     @last_name = last_name
     @status = :opened
     @balance = 0
+
+    self
   end
 
   def deposit_funds(amount)
