@@ -10,12 +10,15 @@ class Deposit < Product
     self
   end
 
+  def dohod
+    puts "Ваш доход #{balance * rate}"
+
   def monthly_profit
-    puts "Ваш ежемесячный доход составляет #{(balance * rate / 100.0 / 12.0).round} рублей"
+    puts "Ваш ежемесячный доход составляет #{dohod / 100.0 / 12.0).round} рублей"
   end
 
   def all_profit
-    puts "Ваш доход за весь срок составляет #{(balance * rate / 100.0 / 12.0).round * period} рублей"
+    puts "Ваш доход за весь срок составляет #{dohod / 100.0 / 12.0).round * period} рублей"
   end
 
   def info

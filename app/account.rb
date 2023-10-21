@@ -2,7 +2,7 @@ require_relative './product'
 
 class Account < Product
   attr_accessor :balance
-  
+
   def deposit_funds(amount)
     @balance += amount
     puts "Ваш счёт пополнен на #{amount} рублей. Ваш баланс #{balance} рублей"
@@ -20,7 +20,6 @@ class Account < Product
   def info
     puts "ID: #{id}"
     puts "Имя владельца: #{first_name} #{last_name}"
-    puts "Баланс счёта: #{balance} рублей"
   end
 
   def close
