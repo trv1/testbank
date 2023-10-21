@@ -2,17 +2,7 @@ require_relative './product'
 
 class Account < Product
   attr_accessor :balance
-
-  def open(first_name, last_name)
-    @id = "%06d" % rand(1e6)
-    @first_name = first_name
-    @last_name = last_name
-    @status = :opened
-    @balance = 0
-
-    self
-  end
-
+  
   def deposit_funds(amount)
     @balance += amount
     puts "Ваш счёт пополнен на #{amount} рублей. Ваш баланс #{balance} рублей"

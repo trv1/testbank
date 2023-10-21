@@ -3,12 +3,7 @@ require_relative './product'
 class Deposit < Product
   attr_accessor :balance, :rate, :period
 
-  def open(first_name, last_name, amount, rate, period)
-    @id = "%06d" % rand(1e6)
-    @first_name = first_name
-    @last_name = last_name
-    @status = :opened
-    @balance = amount
+  def open(rate, period)
     @rate = rate
     @period = period
 
