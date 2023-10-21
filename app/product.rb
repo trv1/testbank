@@ -10,5 +10,12 @@ class Product
     @balance = 0
 
     self
+    def info
+    puts "Сумма долга: #{debt} рублей"
+    puts "Баланс вклада: #{balance} рублей"
+    puts "Процентная ставка вклада: #{rate}%"
+    puts "Срок вклада: #{period} месяцев"
+  end
+
   end
 end

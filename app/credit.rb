@@ -27,9 +27,6 @@ class Credit < Product
   def info
     puts "ID: #{id}"
     puts "Имя владельца: #{first_name} #{last_name}"
-    puts "Сумма долга: #{debt} рублей"
-    puts "Процентная ставка: #{rate}%"
-    puts "Срок кредита: #{period} месяцев"
   end
 
   def close

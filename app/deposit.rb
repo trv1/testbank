@@ -21,9 +21,6 @@ class Deposit < Product
   def info
     puts "ID: #{id}"
     puts "Имя владельца: #{first_name} #{last_name}"
-    puts "Баланс вклада: #{balance} рублей"
-    puts "Процентная ставка вклада: #{rate}%"
-    puts "Срок вклада: #{period} месяцев"
   end
 
   def close
