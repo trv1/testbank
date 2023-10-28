@@ -4,14 +4,15 @@ class Deposit < Product
   attr_accessor :balance, :rate, :period
 
   def open
-    super
     @id = "%06d" % rand(1e6)
     @first_name = first_name
     @last_name = last_name
     @rate = rate
     @period = period
+    @status = :opened
+    @balance = 0
 
-    self
+     self
   end
 
   def dohod
@@ -26,14 +27,11 @@ class Deposit < Product
   end
 
   def info
-    debt = super
-    "Сумма долга: #{debt} = super рублей"
-    balance = super
-    "Баланс вклада: #{balance} = super рублей"
-    rate = super
-    "Процентная ставка вклада: #{rate}% = super"
-    period = super
-    "Срок вклада: #{period} = super месяцев"
+    puts "ID: #{id}"
+    puts "Имя владельца: #{first_name} #{last_name}"
+    puts "Баланс вклада: #{balance} рублей"
+    puts "Процентная ставка вклада: #{rate}%"
+    puts "Срок вклада: #{period} месяцев"
   end
 
   end
