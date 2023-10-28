@@ -4,8 +4,11 @@ class Account < Product
   attr_accessor :balance
 
   def open(first_name, last_name)
+    super(id)
     @id = "%06d" % rand(1e6)
+    super(first_name)
     @first_name = first_name
+    super(last_name)
     @last_name = last_name
     @status = :opened
     @balance = 0

@@ -4,8 +4,11 @@ class Credit < Product
   attr_accessor :debt, :rate, :period
 
   def open(amount, rate, period)
+    super(id)
     @id = "%06d" % rand(1e6)
+    super(first_name)
     @first_name = first_name
+    super(last_name)
     @last_name = last_name
     @status = :opened
     @debt = amount

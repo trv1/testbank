@@ -7,5 +7,10 @@ class Product
   	puts "Баланс вклада: #{balance} рублей"
   	puts "Процентная ставка вклада: #{rate}%"
     puts "Срок вклада: #{period} месяцев"
+
+  def open
+  	@id = "%06d" % rand(1e6)
+    @first_name = first_name
+    @last_name = last_name
   
 end
