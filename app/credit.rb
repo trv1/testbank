@@ -29,10 +29,15 @@ class Credit < Product
   end
 
   def info
+    super
     puts "ID: #{id}"
+    super
     puts "Имя владельца: #{first_name} #{last_name}"
+    super
     puts "Процентная ставка вклада: #{rate}%"
+    super
     puts "Срок вклада: #{period} месяцев"
+    super
     puts "Сумма долга: #{debt} рублей"
   end
 

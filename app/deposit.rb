@@ -27,10 +27,15 @@ class Deposit < Product
   end
 
   def info
+    super
     puts "ID: #{id}"
+    super
     puts "Имя владельца: #{first_name} #{last_name}"
+    super
     puts "Баланс вклада: #{balance} рублей"
+    super
     puts "Процентная ставка вклада: #{rate}%"
+    super
     puts "Срок вклада: #{period} месяцев"
   end
 

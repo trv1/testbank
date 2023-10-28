@@ -25,8 +25,11 @@ class Account < Product
   end
 
   def info
+    super
     puts "ID: #{id}"
+    super
     puts "Имя владельца: #{first_name} #{last_name}"
+    super
     puts "Баланс вклада: #{balance} рублей"
   end
 
