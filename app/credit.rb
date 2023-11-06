@@ -3,12 +3,10 @@ require_relative './product'
 class Credit < Product
   attr_accessor :debt, :rate, :period
 
-  def open(first_name, last_name, amount, rate, period)
-    super(first_name,last_name,id,status,balance)
-    @debt = amount
+  def open(first_name, last_name)
+    super(first_name,last_name)
     @rate = rate
     @period = period
-
     self
   end
 
