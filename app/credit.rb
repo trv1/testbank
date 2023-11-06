@@ -7,6 +7,7 @@ class Credit < Product
     super(first_name,last_name)
     @rate = rate
     @period = period
+    @debt = amount
     self
   end
 
