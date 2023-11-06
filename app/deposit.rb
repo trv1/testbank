@@ -4,10 +4,7 @@ class Deposit < Product
   attr_accessor :balance, :rate, :period
 
   def open(first_name, last_name, amount, rate, period)
-    super(first_name,last_name)
-    @id = "%06d" % rand(1e6)
-    @status = :opened
-    @balance = amount
+    super(first_name,last_name,id,status,balance)
     @rate = rate
     @period = period
 
