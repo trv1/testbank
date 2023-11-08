@@ -3,7 +3,7 @@ require_relative './product'
 class Deposit < Product
   attr_accessor :balance, :rate, :period
 
-  def open(first_name, last_name)
+  def open(first_name, last_name, amount, rate, period)
     super(first_name,last_name)
     @rate = rate
     @period = period
