@@ -7,6 +7,7 @@ class Deposit < Product
     super(first_name,last_name)
     @rate = rate
     @period = period
+    @balance = amount
     self
   end
 
