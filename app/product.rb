@@ -8,4 +8,9 @@ class Product
     @id = "%06d" % rand(1e6)
     @status = :opened
   end
+
+  def info
+    puts "ID: #{id}"
+    puts "Имя владельца: #{first_name} #{last_name}"
+  end
 end

@@ -11,17 +11,20 @@ class Deposit < Product
     self
   end
 
+  def monthly_profit_formula
+    (balance * rate / 100.0 / 12.0).round
+  end
+
   def monthly_profit
-    puts "Ваш ежемесячный доход составляет #{(balance * rate / 100.0 / 12.0).round} рублей"
+    puts "Ваш ежемесячный доход составляет #{monthly_profit_formula} рублей"
   end
 
   def all_profit
-    puts "Ваш доход за весь срок составляет #{(balance * rate / 100.0 / 12.0).round * period} рублей"
+    puts "Ваш доход за весь срок составляет #{monthly_profit_formula * period} рублей"
   end
 
   def info
-    puts "ID: #{id}"
-    puts "Имя владельца: #{first_name} #{last_name}"
+    super
     puts "Баланс вклада: #{balance} рублей"
     puts "Процентная ставка вклада: #{rate}%"
     puts "Срок вклада: #{period} месяцев"
