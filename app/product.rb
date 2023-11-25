@@ -1,7 +1,13 @@
 class Product
   STATUSES = [:opened, :closed]
+  NAMES = {
+    'Account' => 'счёт',
+    'Deposit' => 'вклад',
+    'Credit' => 'кредит'
+  }.freeze
 
   attr_accessor :id, :first_name, :last_name, :status, :balance
+
   def open(first_name,last_name)
     @first_name = first_name
     @last_name = last_name

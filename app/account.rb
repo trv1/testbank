@@ -4,7 +4,7 @@ class Account < Product
   attr_accessor :balance
 
   def open(first_name, last_name)
-    super(first_name,last_name)
+    super(first_name, last_name)
     @balance = 0
     self
   end
@@ -29,7 +29,7 @@ class Account < Product
   end
 
   def close
-    if @balance.zero?
+    if balance.zero?
       @status = :closed
       puts "Ваш счёт №#{id} закрыт"
     else

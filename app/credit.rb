@@ -1,38 +1,38 @@
 require_relative './product'
 
 class Credit < Product
-  attr_accessor :debt, :rate, :period
+  attr_accessor :balance, :rate, :period
 
   def open(first_name, last_name, amount, rate, period)
-    super(first_name,last_name)
+    super(first_name, last_name)
     @rate = rate
     @period = period
-    @debt = amount
+    @balance = amount
     self
   end
 
   def monthly_payment
-    payment = (debt / period.to_f).round + (debt * rate / 100.0 / 12.0).round
+    payment = (balance / period.to_f).round + (balance * rate / 100.0 / 12.0).round
     puts "Ваш ежемесячный платёж составляет #{payment} рублей"
   end
 
   def pay_to_debt(amount)
-    @debt -= amount
-    puts "Вы внесли #{amount} рублей по кредиту №#{id}. Сумма долга #{debt} рублей"
+    @balance -= amount
+    puts "Вы внесли #{amount} рублей по кредиту №#{id}. Сумма долга #{balance} рублей"
 
-    payment = (debt / period.to_f).round + (debt * rate / 100.0 / 12.0).round
+    payment = (balance / period.to_f).round + (balance * rate / 100.0 / 12.0).round
     puts "Ежемесячный платёж уменьшился и стал #{payment} рублей"
   end
 
   def info
     super
-    puts "Сумма долга: #{debt} рублей"
+    puts "Сумма долга: #{balance} рублей"
     puts "Процентная ставка: #{rate}%"
     puts "Срок кредита: #{period} месяцев"
   end
 
   def close
-    if @debt.zero?
+    if balance.zero?
       @status = :closed
       puts "Ваш кредит №#{id} закрыт"
     else

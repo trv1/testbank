@@ -31,7 +31,11 @@ class Deposit < Product
   end
 
   def close
-    @status = :closed
-    puts "Ваш вклад №#{id} закрыт"
+    if balance.zero?
+      @status = :closed
+      puts "Ваш вклад №#{id} закрыт"
+    else
+      puts 'Погасите всю сумму долга перед закрытием счёта'
+    end
   end
 end
