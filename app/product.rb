@@ -7,11 +7,12 @@ class Product
   }.freeze
 
   attr_accessor :id, :first_name, :last_name, :status, :balance
-  def open(first_name,last_name)
+  def open(first_name,last_name,balance)
     @first_name = first_name
     @last_name = last_name
     @id = "%06d" % rand(1e6)
     @status = :opened
+    @balance = 0
   end
 
   def info

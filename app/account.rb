@@ -4,8 +4,7 @@ class Account < Product
   attr_accessor :balance
 
   def open(first_name, last_name)
-    super(first_name, last_name)
-    @balance = 0
+    super(first_name, last_name, balance)
     self
   end
 
