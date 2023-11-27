@@ -1,10 +1,9 @@
 require_relative './product'
 
 class Account < Product
-  attr_accessor :balance
 
   def open(first_name, last_name)
-    super(first_name, last_name, balance)
+    super(first_name, last_name, 0)
     self
   end
 

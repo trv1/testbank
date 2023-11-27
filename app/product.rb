@@ -12,7 +12,7 @@ class Product
     @last_name = last_name
     @id = "%06d" % rand(1e6)
     @status = :opened
-    @balance = 0
+    @balance = balance
   end
 
   def info
