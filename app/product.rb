@@ -1,7 +1,7 @@
 class Product
   STATUSES = [:opened, :closed]
   NAMES = {
-    'Account' => 'счёт',
+    'Account' => 'счет',
     'Deposit' => 'вклад',
     'Credit' => 'кредит'
   }.freeze
@@ -14,6 +14,8 @@ class Product
     @status = :opened
     @balance = balance
   end
+
+  def close.NAMES[self.class.to_s]
 
   def info
     puts "ID: #{id}"

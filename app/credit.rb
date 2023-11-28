@@ -12,9 +12,7 @@ class Credit < Product
 
   def payment
     payment = (balance / period.to_f).round + (balance * rate / 100.0 / 12.0).round
-  end
-
-  def monthly_payment
+  
     puts "Ваш ежемесячный платёж составляет #{payment} рублей"
   end
 
