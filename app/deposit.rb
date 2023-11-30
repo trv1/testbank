@@ -27,14 +27,5 @@ class Deposit < Product
     puts "Баланс вклада: #{balance} рублей"
     puts "Процентная ставка вклада: #{rate}%"
     puts "Срок вклада: #{period} месяцев"
-  end
-
-  def close
-    if balance.zero?
-      @status = :closed
-      puts "Ваш вклад №#{id} закрыт"
-    else
-      puts 'Погасите всю сумму долга перед закрытием счёта'
     end
   end
-end
