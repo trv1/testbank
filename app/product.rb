@@ -15,8 +15,6 @@ class Product
     @balance = balance
   end
 
-  def close.NAMES[self.class.to_s]
-
   def info
     puts "ID: #{id}"
     puts "Имя владельца: #{first_name} #{last_name}"
