@@ -27,13 +27,4 @@ class Account < Product
     super
     puts "Баланс счёта: #{balance} рублей"
   end
-
-  def close
-    if balance.zero?
-      @status = :closed
-      puts "Ваш счёт №#{id} закрыт"
-    else
-      puts 'Снимите все средства перед закрытием счёта'
-    end
-  end
 end
