@@ -30,13 +30,6 @@ class Credit < Product
     puts "Процентная ставка: #{rate}%"
     puts "Срок кредита: #{period} месяцев"
   end
-
-  def close
-    if balance.zero?
-      @status = :closed
-      puts "Ваш кредит №#{id} закрыт"
-    else
-      puts 'Погасите всю сумму долга перед закрытием счёта'
-    end
-  end
 end
+
+ 
