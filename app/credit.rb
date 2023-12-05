@@ -1,13 +1,12 @@
 require_relative './product'
 
 class Credit < Product
-  attr_accessor :balance, :rate, :period
+  attr_accessor :rate, :period
 
   def open(first_name, last_name, amount, rate, period)
-    super(first_name, last_name)
+    super(first_name, last_name,amount)
     @rate = rate
     @period = period
-    @balance = amount
     self
   end
 
@@ -16,12 +15,14 @@ class Credit < Product
   end
 
   def monthly_payment
+    payment = (balance / period.to_f).round + (balance * rate / 100.0 / 12.0).round
     puts "Ваш ежемесячный платёж составляет #{payment} рублей"
   end
 
   def pay_to_debt(amount)
     @balance -= amount
     puts "Вы внесли #{amount} рублей по кредиту №#{id}. Сумма долга #{balance} рублей"
+    payment = (balance / period.to_f).round + (balance * rate / 100.0 / 12.0).round
     puts "Ежемесячный платёж уменьшился и стал #{payment} рублей"
   end
 
